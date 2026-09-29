@@ -1,0 +1,153 @@
+------------------------
+ATIVIDADE DE PROGRAMAÇÃO
+------------------------
+
+= - = - = - = - = - = - = - =
+Nome: Mycael Rodrigues Veras
+= - = - = - = - = - = - = - =
+
+------------------------
+       Questão01
+------------------------
+import java.util.Scanner;
+
+public class AtividadeDeProgramacao01 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        
+        int N1;
+        int N2;
+        int N3;
+        
+        System.out.println("Adcione o 1 valor");
+        N1 = ler.nextInt();
+        
+        System.out.println("Adcione o 2 valor");
+        N2 = ler.nextInt();
+        
+        System.out.println("Adcione o 3 valor");
+        N3 = ler.nextInt();
+
+        if (N1 > N2 && N1 < N3 || N1 < N2 && N1 > N3) {
+            System.out.println(N1);
+        } else if (N2 > N1 && N2 < N3 || N2 < N1 && N2 > N3) {
+            System.out.println(N2);
+        } else {
+            System.out.println(N3);
+        }
+    }
+}
+
+------------------------
+       Questão02
+------------------------
+import java.util.Scanner;
+
+public class TorneioTenis {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int vitorias = 0;
+
+        for (int i = 0; i < 6; i++) {
+            String resultado = ler.next();
+
+            if (resultado.equals("V")) {
+                vitorias++;
+            }
+        }
+
+        if (vitorias >= 5) {
+            System.out.println(1);
+        } else if (vitorias >= 3) {
+            System.out.println(2);
+        } else if (vitorias >= 1) {
+            System.out.println(3);
+        } else {
+            System.out.println(-1);
+        }
+    }
+}
+
+------------------------
+       Questão03
+------------------------
+import java.util.Scanner;
+
+public class CalculoRapido {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int S = ler.nextInt();
+        int A = ler.nextInt();
+        int B = ler.nextInt();
+
+        int quantidade = 0;
+
+        for (int N = A; N <= B; N++) {
+
+            int numero = N;
+            int soma = 0;
+
+            while (numero > 0) {
+                soma = soma + numero % 10;
+                numero = numero / 10;
+            }
+
+            if (soma == S) {
+                quantidade++;
+            }
+        }
+    }
+}
+
+------------------------
+       Questão04
+------------------------
+import java.util.Scanner;
+
+public class JogoDeDominos {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int N = ler.nextInt();
+
+        int pecas = (N + 1) * (N + 2) / 2;
+
+        System.out.println(pecas);
+    }
+}
+
+------------------------
+       Questão05
+------------------------
+import java.util.Scanner;
+
+public class Corrida {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int N1 = ler.nextInt();
+        int D1 = ler.nextInt();
+        int V1 = ler.nextInt();
+
+        int N2 = ler.nextInt();
+        int D2 = ler.nextInt();
+        int V2 = ler.nextInt();
+
+        double tempo1 = (double) D1 / V1;
+        double tempo2 = (double) D2 / V2;
+
+        if (tempo1 < tempo2) {
+            System.out.println(N1);
+        } else {
+            System.out.println(N2);
+        }
+    }
+}
+
